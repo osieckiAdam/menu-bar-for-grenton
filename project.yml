@@ -1,4 +1,4 @@
-name: GrentonBar
+name: MenuBarForGrenton
 options:
   bundleIdPrefix: com.osieckiadam
   deploymentTarget:
@@ -17,30 +17,34 @@ settings:
     DEVELOPMENT_TEAM: 6VV2KQCWB8
     CODE_SIGN_STYLE: Automatic
 targets:
-  GrentonBar:
+  MenuBarForGrenton:
     type: application
     platform: macOS
     sources:
-      - GrentonBar
+      - MenuBarForGrenton
     info:
-      path: GrentonBar/Info.plist
+      path: MenuBarForGrenton/Info.plist
       properties:
-        CFBundleDisplayName: GrentonBar
+        CFBundleDisplayName: Menu Bar for Grenton
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         CFBundleDevelopmentRegion: pl
         LSUIElement: true
         LSApplicationCategoryType: public.app-category.utilities
-        NSLocalNetworkUsageDescription: GrentonBar łączy się ze sterownikami CLU Grenton w Twojej sieci domowej, żeby pokazywać i przełączać światła oraz sterować roletami.
+        NSLocalNetworkUsageDescription: Menu Bar for Grenton łączy się ze sterownikami CLU Grenton w Twojej sieci domowej, żeby pokazywać i przełączać światła oraz sterować roletami.
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true
     entitlements:
-      path: GrentonBar/GrentonBar.entitlements
+      path: MenuBarForGrenton/MenuBarForGrenton.entitlements
       properties:
         com.apple.security.app-sandbox: true
         com.apple.security.network.client: true
         com.apple.security.files.user-selected.read-only: true
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.osieckiadam.GrentonBar
+        PRODUCT_BUNDLE_IDENTIFIER: com.osieckiadam.MenuBarForGrenton
+        PRODUCT_NAME: Menu Bar for Grenton
+        PRODUCT_MODULE_NAME: MenuBarForGrenton
         ENABLE_HARDENED_RUNTIME: YES
     dependencies:
       - package: GrentonCore
@@ -50,31 +54,33 @@ targets:
       # Demo mode and SwiftUI previews run on the simulation (NOTES.md A5).
       - package: GrentonCore
         product: GrentonSimulation
-  GrentonBarTests:
+  MenuBarForGrentonTests:
     type: bundle.unit-test
     platform: macOS
     sources:
-      - GrentonBarTests
+      - MenuBarForGrentonTests
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.osieckiadam.GrentonBarTests
+        PRODUCT_BUNDLE_IDENTIFIER: com.osieckiadam.MenuBarForGrentonTests
         GENERATE_INFOPLIST_FILE: YES
+        # XcodeGen derives the host from the target name; the app is named after PRODUCT_NAME.
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Menu Bar for Grenton.app/Contents/MacOS/Menu Bar for Grenton"
     dependencies:
       # GrentonSimulation comes from the host app. Linking it here as well
       # makes Xcode build it as a dynamic framework with its own copy of
       # GrentonDevices (NOTES.md D5).
-      - target: GrentonBar
+      - target: MenuBarForGrenton
 schemes:
-  GrentonBar:
+  MenuBarForGrenton:
     build:
       targets:
-        GrentonBar: all
-        GrentonBarTests: [test]
+        MenuBarForGrenton: all
+        MenuBarForGrentonTests: [test]
     run:
       config: Debug
       commandLineArguments:
-        "-GrentonBarDemo YES": false
+        "-DemoMode YES": false
     test:
       config: Debug
       targets:
-        - GrentonBarTests
+        - MenuBarForGrentonTests

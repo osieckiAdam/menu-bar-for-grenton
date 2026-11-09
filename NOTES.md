@@ -1,6 +1,6 @@
-# GrentonBar — uwagi do biblioteki grenton-core-swift
+# Menu Bar for Grenton — uwagi do biblioteki grenton-core-swift
 
-GrentonBar to pierwszy test biblioteki z perspektywy jej użytkownika (apka
+Menu Bar for Grenton to pierwszy test biblioteki z perspektywy jej użytkownika (apka
 paska menu macOS, `from: "0.14.0"`). Tu zbieram wszystko, co w bibliotece
 okazało się niewygodne, niejasne lub brakujące. Apka niczego nie obchodzi
 po cichu: każde tymczasowe obejście jest opisane poniżej, a naprawy idą
@@ -200,7 +200,7 @@ Status: `otwarte` / `przyjęte` (uzgodniony kształt zmiany, czeka na bibliotek�
   osobnym raportem. Każdy klient, który chce wiedzieć, czy zmiana się
   udała, musi sam subskrybować `updates()` przed komendą i czekać
   z timeoutem. Przykład `switch-light` robi to pętlą odpytującą `isOn`
-  co 200 ms przez 5 s; GrentonBar — taskiem na `updates()` z timeoutem
+  co 200 ms przez 5 s; Menu Bar for Grenton — taskiem na `updates()` z timeoutem
   (`LightItem.setOn`, ~25 linii), dodatkowo przez `switch` po typie,
   bo `any SwitchableEntity` nie ma `updates()` (A2).
 - **Gdzie:** `Sources/GrentonDevices/Entities.swift`,
@@ -221,7 +221,7 @@ Status: `otwarte` / `przyjęte` (uzgodniony kształt zmiany, czeka na bibliotek�
   uśpieniu, czy `stop()`/`start()` przy każdym otwarciu menu jest
   w porządku (koszt `start()`, ile trwa do pierwszych wartości przy
   ~200 kluczach), czy wolno je wołać często.
-- **Pomiar na żywo (2026-10-26, wstępny):** GrentonBar woła `start()`
+- **Pomiar na żywo (2026-10-26, wstępny):** Menu Bar for Grenton woła `start()`
   przy każdym otwarciu menu i `stop()` minutę po zamknięciu. Czas do
   pokazania stanów jest krótki („niewiele”), a ponowne otwarcie po
   `stop()` łączy się bez problemu. Obserwacja trwa (dłuższe użycie,
@@ -248,7 +248,7 @@ Status: `otwarte` / `przyjęte` (uzgodniony kształt zmiany, czeka na bibliotek�
   przełączenie fizycznym włącznikiem pojawia się w otwartym menu.
   Warto to napisać w artykule wprost („`network.client` wystarcza, także
   na pushe z CLU”).
-- **Nadal otwarte:** `AnySourceUdpSocketFactory` w sandboksie (GrentonBar
+- **Nadal otwarte:** `AnySourceUdpSocketFactory` w sandboksie (Menu Bar for Grenton
   go nie używa).
 
 ### D3. `InterfaceStore.system()` vs. potrzeba DTO — w bibliotece (0.13.1, „the interface beside the system”)
@@ -309,7 +309,7 @@ Status: `otwarte` / `przyjęte` (uzgodniony kształt zmiany, czeka na bibliotek�
   Na żywo: po kliknięciu przełącznik przeskakuje, natychmiast wraca (bo
   `get` czyta stan sprzed raportu), a po ~ułamku sekundy znów
   przeskakuje, gdy CLU zgłosi nowy stan. Dokładnie to zobaczył autor
-  w pierwszej wersji GrentonBar, napisanej wg tego przykładu.
+  w pierwszej wersji Menu Bar for Grenton, napisanej wg tego przykładu.
 - **Gdzie:** `GrentonDevices.docc/ObservingState.md` („In SwiftUI"),
   `GrentonSwiftUI.docc/GrentonSwiftUI.md`.
 - **W apce:** stan optymistyczny — `LightItem.pendingOn` pokazuje

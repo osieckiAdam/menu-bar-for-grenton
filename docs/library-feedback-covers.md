@@ -1,9 +1,9 @@
-# Prompt dla sesji w `grenton-core-swift`: uwagi z GrentonBar po roletach (2026-11-06)
+# Prompt dla sesji w `grenton-core-swift`: uwagi z Menu Bar for Grenton po roletach (2026-11-06)
 
 Tekst poniżej (od linii poziomej) wkleja się jako polecenie w repo
-`grenton-core-swift`. Źródła: GrentonBar `NOTES.md` (A5, A7, D6), pliki
+`grenton-core-swift`. Źródła: Menu Bar for Grenton `NOTES.md` (A5, A7, D6), pliki
 `Model/LightItem.swift`, `Model/CoverItem.swift`, `Demo/DemoDriver.swift`
-i testy `GrentonBarTests/LightListTests.swift`.
+i testy `MenuBarForGrentonTests/LightListTests.swift`.
 
 ---
 
@@ -11,7 +11,7 @@ Użyj skilla `grenton-change`.
 
 ## Kontekst
 
-Piszę GrentonBar: aplikację paska menu macOS, pierwszą aplikację zbudowaną na
+Piszę Menu Bar for Grenton: aplikację paska menu macOS, pierwszą aplikację zbudowaną na
 `grenton-core-swift`. Pokazuje strony i sekcje interfejsu myGrenton, przełącza
 światła, a od wczoraj steruje roletami `ROLLER_SHUTTER_V3` przez `CoverEntity`
 (przyciski podnieś / stop / opuść, suwak lameli). Apka jest testem biblioteki
@@ -43,7 +43,7 @@ wysłaniem, wysłać, czekać z timeoutem na raport spełniający warunek,
 a w międzyczasie pokazywać stan żądany (inaczej przełącznik miga, jak
 w przykładzie `LightRow` z Observing State).
 
-**Jak to odkryłem.** Napisałem to w GrentonBar dwa razy. Raz dla
+**Jak to odkryłem.** Napisałem to w Menu Bar for Grenton dwa razy. Raz dla
 `SwitchableEntity` (`LightItem.setOn`: warunek `isOn == on`), drugi raz
 wczoraj dla `CoverEntity` (`CoverItem.perform`: warunek „jakikolwiek raport”,
 bo roleta jedzie kilkadziesiąt sekund i potwierdzeniem jest pierwsza zmiana
@@ -87,7 +87,7 @@ State poprawić `LightRow`: pokazywać stan żądany do raportu (to jest moje D6
 on/off. Decyzja z października brzmiała: echo dla termostatu czy rolety byłoby
 zgadywaniem.
 
-**Jak to odkryłem.** Tryb demo GrentonBar (podglądy SwiftUI i `-GrentonBarDemo
+**Jak to odkryłem.** Tryb demo Menu Bar for Grenton (podglądy SwiftUI i `-DemoMode
 YES`) musiał dostać własny symulator rolety: po komendzie `state` 1 lub 2,
 potem `position` co 10 jednostek co 300 ms, na końcu `state` 0; `stop()` →
 `state` 0; `setTilt(t)` → surowa wartość lameli `Int(90 − 0.9·t)` ze spec

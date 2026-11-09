@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00F0A8A21C00B08199A5F8F4 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EDBB03FEA2150FFD23AB2D /* HomeList.swift */; };
+		07B991EBD755C31C87892113 /* Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A0DB62EE38F6C6706EF1 /* Snapshots.swift */; };
+		113B15437006A4CD2E18FE4D /* GrentonSimulation in Frameworks */ = {isa = PBXBuildFile; productRef = D3558DFF8CA8DD8B93229001 /* GrentonSimulation */; };
+		280612919D8D40270FF65E83 /* MenuBarForGrentonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB232362818701E6CB6EB73 /* MenuBarForGrentonApp.swift */; };
+		38EC778420834B435F9EB9C6 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CC71DE0BD20FC1CB63BEA /* ConnectionStatus.swift */; };
+		3D4AD8EBED675EBFF1513071 /* MenuFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553E5FF7DC3C4772EBFC8DF0 /* MenuFooter.swift */; };
+		3E3ED87ACFFBCDFE827C5B96 /* ImportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895451F33B93251E97F895E6 /* ImportModel.swift */; };
+		43AC0C8816992AB0BCB538CD /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8B1F104D760792ABADEBD /* MenuView.swift */; };
+		4ECF9C9895AF713AEA4959EB /* AppLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F88823A660EFCC75B45EB /* AppLog.swift */; };
+		5F6D21567B1E5FD53ACEFF45 /* PageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1C07491989C6029FDFCD7F /* PageListView.swift */; };
+		68885F7AA4DCE85D9579D36E /* GrentonSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D4EC92D9D5295338C787FC23 /* GrentonSwiftUI */; };
+		6F698FCF2574CD8CE97AFFCB /* test-interface.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EEEC5C161DA6765B7472EB1 /* test-interface.json */; };
+		86A84CD3A7C0E009727F296D /* LightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953BE383AA85528BD1377F1 /* LightItem.swift */; };
+		8E3F15E55A073674BE7E588E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9880F2BB5EE91661875CF5 /* AppModel.swift */; };
+		B146708A13149FA818955AFA /* GrentonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14A86F5F432743366DBAC85F /* GrentonKit */; };
+		BDD6C6B178D0A79A83D92ED0 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5B750B5FDD753E13293B9 /* ImportView.swift */; };
+		D7028E8EEB3F5AC85E32071D /* LightListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D03A8430F554A1213C745 /* LightListTests.swift */; };
+		E21A2303C054F5186D95634B /* demo-interface.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D2BF1017DE12462A6E4C53 /* demo-interface.json */; };
+		E2767605C9205CA257FFA4F3 /* CoverItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F650D7B277A160F727FAF79 /* CoverItem.swift */; };
+		E97334069578D9AD28C296DA /* WindowVisibilityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB756BCA33EFE46823B6C0E /* WindowVisibilityObserver.swift */; };
+		F181228C20BBF2422655B710 /* DemoDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4975435E353D372E027E0 /* DemoDriver.swift */; };
+		F59BB053F4F0322EF7322CEB /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F63259A1FB470080F1308 /* HomeModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5336FA1013E18FCC0318FC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 788BC50E5F5BF703ACE6D308 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8E176CC8C0EE5089307D191;
+			remoteInfo = MenuBarForGrenton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D1C07491989C6029FDFCD7F /* PageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageListView.swift; sourceTree = "<group>"; };
+		1EEEC5C161DA6765B7472EB1 /* test-interface.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "test-interface.json"; sourceTree = "<group>"; };
+		3075A0DB62EE38F6C6706EF1 /* Snapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshots.swift; sourceTree = "<group>"; };
+		3CB756BCA33EFE46823B6C0E /* WindowVisibilityObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowVisibilityObserver.swift; sourceTree = "<group>"; };
+		3D4F88823A660EFCC75B45EB /* AppLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLog.swift; sourceTree = "<group>"; };
+		434D53DBBA87A76F2B2B44CE /* MenuBarForGrentonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuBarForGrentonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4860C82E2232946DC0F69AD5 /* MenuBarForGrenton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuBarForGrenton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		553E5FF7DC3C4772EBFC8DF0 /* MenuFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFooter.swift; sourceTree = "<group>"; };
+		5E7CC71DE0BD20FC1CB63BEA /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
+		5F650D7B277A160F727FAF79 /* CoverItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverItem.swift; sourceTree = "<group>"; };
+		64B8B1F104D760792ABADEBD /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		7D5D03A8430F554A1213C745 /* LightListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightListTests.swift; sourceTree = "<group>"; };
+		895451F33B93251E97F895E6 /* ImportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportModel.swift; sourceTree = "<group>"; };
+		9953BE383AA85528BD1377F1 /* LightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightItem.swift; sourceTree = "<group>"; };
+		B00F63259A1FB470080F1308 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		B3D2BF1017DE12462A6E4C53 /* demo-interface.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "demo-interface.json"; sourceTree = "<group>"; };
+		CAB232362818701E6CB6EB73 /* MenuBarForGrentonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarForGrentonApp.swift; sourceTree = "<group>"; };
+		D3EDBB03FEA2150FFD23AB2D /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
+		D5E5B750B5FDD753E13293B9 /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+		D6D8F315ADE53DC19A64E753 /* MenuBarForGrenton.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MenuBarForGrenton.entitlements; sourceTree = "<group>"; };
+		EBD4975435E353D372E027E0 /* DemoDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDriver.swift; sourceTree = "<group>"; };
+		EBD7B48B9AAE7751C7568A39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EF9880F2BB5EE91661875CF5 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F35D6F829561844AFC2F63C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B146708A13149FA818955AFA /* GrentonKit in Frameworks */,
+				68885F7AA4DCE85D9579D36E /* GrentonSwiftUI in Frameworks */,
+				113B15437006A4CD2E18FE4D /* GrentonSimulation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AA0C4F9E1502B8A71D4B22C /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				895451F33B93251E97F895E6 /* ImportModel.swift */,
+				D5E5B750B5FDD753E13293B9 /* ImportView.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		B23F29F27DC3FB6D40A809F7 /* MenuBarForGrentonTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D5D03A8430F554A1213C745 /* LightListTests.swift */,
+				3075A0DB62EE38F6C6706EF1 /* Snapshots.swift */,
+				D332A35DB52395462691A267 /* Fixtures */,
+			);
+			path = MenuBarForGrentonTests;
+			sourceTree = "<group>";
+		};
+		B73A50E3B47110E7CE451989 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				553E5FF7DC3C4772EBFC8DF0 /* MenuFooter.swift */,
+				64B8B1F104D760792ABADEBD /* MenuView.swift */,
+				0D1C07491989C6029FDFCD7F /* PageListView.swift */,
+				3CB756BCA33EFE46823B6C0E /* WindowVisibilityObserver.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C136B5CE3E2C133A22F4C083 = {
+			isa = PBXGroup;
+			children = (
+				E39A321260EE97BA95AFF6EA /* MenuBarForGrenton */,
+				B23F29F27DC3FB6D40A809F7 /* MenuBarForGrentonTests */,
+				D2CA10723A477042D3A7F65D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2CA10723A477042D3A7F65D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4860C82E2232946DC0F69AD5 /* MenuBarForGrenton.app */,
+				434D53DBBA87A76F2B2B44CE /* MenuBarForGrentonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D332A35DB52395462691A267 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				1EEEC5C161DA6765B7472EB1 /* test-interface.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		E39A321260EE97BA95AFF6EA /* MenuBarForGrenton */ = {
+			isa = PBXGroup;
+			children = (
+				3D4F88823A660EFCC75B45EB /* AppLog.swift */,
+				EF9880F2BB5EE91661875CF5 /* AppModel.swift */,
+				EBD7B48B9AAE7751C7568A39 /* Info.plist */,
+				D6D8F315ADE53DC19A64E753 /* MenuBarForGrenton.entitlements */,
+				CAB232362818701E6CB6EB73 /* MenuBarForGrentonApp.swift */,
+				E95636819CC7CBFAB4505B82 /* Demo */,
+				6AA0C4F9E1502B8A71D4B22C /* Import */,
+				E5B2B417BF5D4E091A7EE393 /* Model */,
+				B73A50E3B47110E7CE451989 /* Views */,
+			);
+			path = MenuBarForGrenton;
+			sourceTree = "<group>";
+		};
+		E5B2B417BF5D4E091A7EE393 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CC71DE0BD20FC1CB63BEA /* ConnectionStatus.swift */,
+				5F650D7B277A160F727FAF79 /* CoverItem.swift */,
+				D3EDBB03FEA2150FFD23AB2D /* HomeList.swift */,
+				B00F63259A1FB470080F1308 /* HomeModel.swift */,
+				9953BE383AA85528BD1377F1 /* LightItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E95636819CC7CBFAB4505B82 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				B3D2BF1017DE12462A6E4C53 /* demo-interface.json */,
+				EBD4975435E353D372E027E0 /* DemoDriver.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8E176CC8C0EE5089307D191 /* MenuBarForGrenton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7CB90EE084D81A659FA93E4 /* Build configuration list for PBXNativeTarget "MenuBarForGrenton" */;
+			buildPhases = (
+				457C0FF7A80178924B46196B /* Sources */,
+				70CC0E0AC98ADA5B65A5DB8A /* Resources */,
+				F35D6F829561844AFC2F63C5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MenuBarForGrenton;
+			packageProductDependencies = (
+				14A86F5F432743366DBAC85F /* GrentonKit */,
+				D4EC92D9D5295338C787FC23 /* GrentonSwiftUI */,
+				D3558DFF8CA8DD8B93229001 /* GrentonSimulation */,
+			);
+			productName = MenuBarForGrenton;
+			productReference = 4860C82E2232946DC0F69AD5 /* MenuBarForGrenton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB94635D16E7D38E35231AE9 /* MenuBarForGrentonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26D77666025FEDB3EEBFE746 /* Build configuration list for PBXNativeTarget "MenuBarForGrentonTests" */;
+			buildPhases = (
+				72F310C84AF612C03BCCCA60 /* Sources */,
+				9AD0BDD46D9FF2CBEEDDE122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6652C14FB9B50957CF08A6A7 /* PBXTargetDependency */,
+			);
+			name = MenuBarForGrentonTests;
+			packageProductDependencies = (
+			);
+			productName = MenuBarForGrentonTests;
+			productReference = 434D53DBBA87A76F2B2B44CE /* MenuBarForGrentonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		788BC50E5F5BF703ACE6D308 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A8E176CC8C0EE5089307D191 = {
+						DevelopmentTeam = 6VV2KQCWB8;
+						ProvisioningStyle = Automatic;
+					};
+					AB94635D16E7D38E35231AE9 = {
+						DevelopmentTeam = 6VV2KQCWB8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3EAF6616DD9CEE89381BB8EE /* Build configuration list for PBXProject "MenuBarForGrenton" */;
+			developmentRegion = pl;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				pl,
+			);
+			mainGroup = C136B5CE3E2C133A22F4C083;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EA1A3EF76B4375A024E7F3F9 /* XCRemoteSwiftPackageReference "grenton-core-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D2CA10723A477042D3A7F65D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8E176CC8C0EE5089307D191 /* MenuBarForGrenton */,
+				AB94635D16E7D38E35231AE9 /* MenuBarForGrentonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70CC0E0AC98ADA5B65A5DB8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21A2303C054F5186D95634B /* demo-interface.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD0BDD46D9FF2CBEEDDE122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F698FCF2574CD8CE97AFFCB /* test-interface.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		457C0FF7A80178924B46196B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ECF9C9895AF713AEA4959EB /* AppLog.swift in Sources */,
+				8E3F15E55A073674BE7E588E /* AppModel.swift in Sources */,
+				38EC778420834B435F9EB9C6 /* ConnectionStatus.swift in Sources */,
+				E2767605C9205CA257FFA4F3 /* CoverItem.swift in Sources */,
+				F181228C20BBF2422655B710 /* DemoDriver.swift in Sources */,
+				00F0A8A21C00B08199A5F8F4 /* HomeList.swift in Sources */,
+				F59BB053F4F0322EF7322CEB /* HomeModel.swift in Sources */,
+				3E3ED87ACFFBCDFE827C5B96 /* ImportModel.swift in Sources */,
+				BDD6C6B178D0A79A83D92ED0 /* ImportView.swift in Sources */,
+				86A84CD3A7C0E009727F296D /* LightItem.swift in Sources */,
+				280612919D8D40270FF65E83 /* MenuBarForGrentonApp.swift in Sources */,
+				3D4AD8EBED675EBFF1513071 /* MenuFooter.swift in Sources */,
+				43AC0C8816992AB0BCB538CD /* MenuView.swift in Sources */,
+				5F6D21567B1E5FD53ACEFF45 /* PageListView.swift in Sources */,
+				E97334069578D9AD28C296DA /* WindowVisibilityObserver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F310C84AF612C03BCCCA60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7028E8EEB3F5AC85E32071D /* LightListTests.swift in Sources */,
+				07B991EBD755C31C87892113 /* Snapshots.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6652C14FB9B50957CF08A6A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8E176CC8C0EE5089307D191 /* MenuBarForGrenton */;
+			targetProxy = C5336FA1013E18FCC0318FC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		86EA49AC3941E7D9E3CFD4D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.osieckiadam.MenuBarForGrentonTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menu Bar for Grenton.app/Contents/MacOS/Menu Bar for Grenton";
+			};
+			name = Debug;
+		};
+		8C8E5A50F6E338FDD2FE7DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MenuBarForGrenton/MenuBarForGrenton.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MenuBarForGrenton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.osieckiadam.MenuBarForGrenton;
+				PRODUCT_MODULE_NAME = MenuBarForGrenton;
+				PRODUCT_NAME = "Menu Bar for Grenton";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		97362A28EAB44E3CB8673A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6VV2KQCWB8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A582BAB01610E391279A0238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.osieckiadam.MenuBarForGrentonTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menu Bar for Grenton.app/Contents/MacOS/Menu Bar for Grenton";
+			};
+			name = Release;
+		};
+		C353B8739322B34D8DD2DA2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6VV2KQCWB8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		F215E734051A8696A9018610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MenuBarForGrenton/MenuBarForGrenton.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MenuBarForGrenton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.osieckiadam.MenuBarForGrenton;
+				PRODUCT_MODULE_NAME = MenuBarForGrenton;
+				PRODUCT_NAME = "Menu Bar for Grenton";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26D77666025FEDB3EEBFE746 /* Build configuration list for PBXNativeTarget "MenuBarForGrentonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86EA49AC3941E7D9E3CFD4D9 /* Debug */,
+				A582BAB01610E391279A0238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3EAF6616DD9CEE89381BB8EE /* Build configuration list for PBXProject "MenuBarForGrenton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C353B8739322B34D8DD2DA2F /* Debug */,
+				97362A28EAB44E3CB8673A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B7CB90EE084D81A659FA93E4 /* Build configuration list for PBXNativeTarget "MenuBarForGrenton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C8E5A50F6E338FDD2FE7DEE /* Debug */,
+				F215E734051A8696A9018610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA1A3EF76B4375A024E7F3F9 /* XCRemoteSwiftPackageReference "grenton-core-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/osieckiAdam/grenton-core-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		14A86F5F432743366DBAC85F /* GrentonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA1A3EF76B4375A024E7F3F9 /* XCRemoteSwiftPackageReference "grenton-core-swift" */;
+			productName = GrentonKit;
+		};
+		D3558DFF8CA8DD8B93229001 /* GrentonSimulation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA1A3EF76B4375A024E7F3F9 /* XCRemoteSwiftPackageReference "grenton-core-swift" */;
+			productName = GrentonSimulation;
+		};
+		D4EC92D9D5295338C787FC23 /* GrentonSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA1A3EF76B4375A024E7F3F9 /* XCRemoteSwiftPackageReference "grenton-core-swift" */;
+			productName = GrentonSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 788BC50E5F5BF703ACE6D308 /* Project object */;
+}

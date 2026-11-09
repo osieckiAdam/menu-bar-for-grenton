@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A540054103B553F5CAE4446"
-               BuildableName = "GrentonBar.app"
-               BlueprintName = "GrentonBar"
-               ReferencedContainer = "container:GrentonBar.xcodeproj">
+               BlueprintIdentifier = "A8E176CC8C0EE5089307D191"
+               BuildableName = "MenuBarForGrenton.app"
+               BlueprintName = "MenuBarForGrenton"
+               ReferencedContainer = "container:MenuBarForGrenton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,10 +29,10 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1F93E320366F911A8A2EBDF"
-               BuildableName = "GrentonBarTests.xctest"
-               BlueprintName = "GrentonBarTests"
-               ReferencedContainer = "container:GrentonBar.xcodeproj">
+               BlueprintIdentifier = "AB94635D16E7D38E35231AE9"
+               BuildableName = "MenuBarForGrentonTests.xctest"
+               BlueprintName = "MenuBarForGrentonTests"
+               ReferencedContainer = "container:MenuBarForGrenton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,10 +46,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A540054103B553F5CAE4446"
-            BuildableName = "GrentonBar.app"
-            BlueprintName = "GrentonBar"
-            ReferencedContainer = "container:GrentonBar.xcodeproj">
+            BlueprintIdentifier = "A8E176CC8C0EE5089307D191"
+            BuildableName = "MenuBarForGrenton.app"
+            BlueprintName = "MenuBarForGrenton"
+            ReferencedContainer = "container:MenuBarForGrenton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -58,10 +58,10 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1F93E320366F911A8A2EBDF"
-               BuildableName = "GrentonBarTests.xctest"
-               BlueprintName = "GrentonBarTests"
-               ReferencedContainer = "container:GrentonBar.xcodeproj">
+               BlueprintIdentifier = "AB94635D16E7D38E35231AE9"
+               BuildableName = "MenuBarForGrentonTests.xctest"
+               BlueprintName = "MenuBarForGrentonTests"
+               ReferencedContainer = "container:MenuBarForGrenton.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -82,15 +82,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A540054103B553F5CAE4446"
-            BuildableName = "GrentonBar.app"
-            BlueprintName = "GrentonBar"
-            ReferencedContainer = "container:GrentonBar.xcodeproj">
+            BlueprintIdentifier = "A8E176CC8C0EE5089307D191"
+            BuildableName = "MenuBarForGrenton.app"
+            BlueprintName = "MenuBarForGrenton"
+            ReferencedContainer = "container:MenuBarForGrenton.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-GrentonBarDemo YES"
+            argument = "-DemoMode YES"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -105,10 +105,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A540054103B553F5CAE4446"
-            BuildableName = "GrentonBar.app"
-            BlueprintName = "GrentonBar"
-            ReferencedContainer = "container:GrentonBar.xcodeproj">
+            BlueprintIdentifier = "A8E176CC8C0EE5089307D191"
+            BuildableName = "MenuBarForGrenton.app"
+            BlueprintName = "MenuBarForGrenton"
+            ReferencedContainer = "container:MenuBarForGrenton.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

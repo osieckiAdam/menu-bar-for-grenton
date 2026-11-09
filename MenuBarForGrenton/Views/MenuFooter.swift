@@ -44,7 +44,7 @@ struct MenuFooter: View {
                 }
             }
             Divider()
-            Button("Zakończ GrentonBar") { NSApp.terminate(nil) }
+            Button("Zakończ Menu Bar for Grenton") { NSApp.terminate(nil) }
                 .keyboardShortcut("q")
         } label: {
             Image(systemName: "ellipsis.circle")

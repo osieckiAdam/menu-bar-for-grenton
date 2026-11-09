@@ -51,7 +51,7 @@ struct ImportView: View {
 
             StepView(model: model, close: close)
 
-            Text("Interfejs zawiera klucz szyfrowania Twoich CLU. GrentonBar przechowuje go wyłącznie w swoim katalogu w Application Support.")
+            Text("Interfejs zawiera klucz szyfrowania Twoich CLU. Menu Bar for Grenton przechowuje go wyłącznie w swoim katalogu w Application Support.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)

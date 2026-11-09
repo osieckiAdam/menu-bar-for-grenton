@@ -133,7 +133,7 @@ final class HomeModel {
 }
 
 extension GrentonLogger {
-    /// Library warnings in the unified log (Console.app, subsystem `com.osieckiadam.GrentonBar`).
+    /// Library warnings in the unified log (Console.app, subsystem `com.osieckiadam.MenuBarForGrenton`).
     static let appLog = GrentonLogger { level, message in
         if level >= .warning { AppLog.grenton.warning("\(message, privacy: .public)") }
     }

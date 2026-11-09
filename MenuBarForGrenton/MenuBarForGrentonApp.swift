@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 
 @main
-struct GrentonBarApp: App {
+struct MenuBarForGrentonApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
 
     var body: some Scene {
@@ -50,7 +50,7 @@ struct MenuBarIcon: View {
         // (MenuBarExtra does not always relayout the menu bar).
         Image(systemName: needsAttention ? "lightbulb.slash" : "lightbulb")
             .frame(width: 22, height: 22)
-            .accessibilityLabel("GrentonBar")
+            .accessibilityLabel("Menu Bar for Grenton")
     }
 
     private var needsAttention: Bool {

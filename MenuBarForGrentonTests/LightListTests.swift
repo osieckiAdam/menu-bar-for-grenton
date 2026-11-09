@@ -2,7 +2,7 @@ import Foundation
 import GrentonKit
 import GrentonSimulation
 import Testing
-@testable import GrentonBar
+@testable import MenuBarForGrenton
 
 // The fixture is synthetic: three pages — A with a light above the first
 // header, a dimmer, a double switch, an RGB light, a relay with a valve icon,

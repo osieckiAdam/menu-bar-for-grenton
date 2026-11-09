@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>pl</string>
 	<key>CFBundleDisplayName</key>
-	<string>GrentonBar</string>
+	<string>Menu Bar for Grenton</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSUIElement</key>
@@ -30,6 +30,6 @@
 		<true/>
 	</dict>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>GrentonBar łączy się ze sterownikami CLU Grenton w Twojej sieci domowej, żeby pokazywać i przełączać światła oraz sterować roletami.</string>
+	<string>Menu Bar for Grenton łączy się ze sterownikami CLU Grenton w Twojej sieci domowej, żeby pokazywać i przełączać światła oraz sterować roletami.</string>
 </dict>
 </plist>

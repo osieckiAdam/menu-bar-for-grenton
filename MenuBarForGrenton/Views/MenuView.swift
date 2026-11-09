@@ -21,7 +21,7 @@ struct MenuView: View {
 
     private var header: some View {
         HStack(spacing: 6) {
-            Text(app.home?.title ?? "GrentonBar")
+            Text(app.home?.title ?? "Menu Bar for Grenton")
                 .font(.headline)
                 .lineLimit(1)
             if app.isDemo {

@@ -13,8 +13,8 @@ import GrentonSimulation
 @Observable
 @MainActor
 final class DemoDriver {
-    /// Launch argument that turns demo mode on: `-GrentonBarDemo YES` (set in the Debug scheme).
-    static let defaultsKey = "GrentonBarDemo"
+    /// Launch argument that turns demo mode on: `-DemoMode YES` (set in the Debug scheme).
+    static let defaultsKey = "DemoMode"
 
     let simulation: SimulatedGrentonSystem
     private(set) var offlineClus: Set<String> = []

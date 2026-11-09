@@ -1,11 +1,11 @@
 import AppKit
 import SwiftUI
 import Testing
-@testable import GrentonBar
+@testable import MenuBarForGrenton
 
 /// Renders the menu and the import window to PNG for a visual check without
 /// clicking the menu bar. Runs only when asked:
-/// `TEST_RUNNER_SNAPSHOT_DIR=/some/dir xcodebuild test -only-testing:GrentonBarTests/Snapshots`
+/// `TEST_RUNNER_SNAPSHOT_DIR=/some/dir xcodebuild test -only-testing:MenuBarForGrentonTests/Snapshots`
 @MainActor
 struct Snapshots {
     @Test(.enabled(if: ProcessInfo.processInfo.environment["SNAPSHOT_DIR"] != nil))
@@ -14,6 +14,12 @@ struct Snapshots {
         app.menuOpened()
         try await Task.sleep(for: .milliseconds(900))
         try await save(MenuView(app: app, openImport: {}), "menu-demo")
+        // A room with lights and shutters open; the user's own choice comes back afterwards.
+        let defaults = UserDefaults.standard
+        let expanded = defaults.string(forKey: "expandedPages")
+        defaults.set("Pokój dzienny (demo)", forKey: "expandedPages")
+        try await save(MenuView(app: app, openImport: {}), "menu-room")
+        defaults.set(expanded, forKey: "expandedPages")
         app.home?.demo?.toggleOffline(app.home!.demo!.simulation.clus[1])
         try await Task.sleep(for: .milliseconds(100))
         try await save(MenuView(app: app, openImport: {}), "menu-degraded")
