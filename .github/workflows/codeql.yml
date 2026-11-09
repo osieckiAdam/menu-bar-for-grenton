@@ -42,7 +42,7 @@ jobs:
             -project MenuBarForGrenton.xcodeproj \
             -scheme MenuBarForGrenton \
             -configuration Debug \
-            -destination 'platform=macOS,arch=arm64' \
+            -destination 'platform=macOS' \
             -onlyUsePackageVersionsFromResolvedFile \
             CODE_SIGNING_ALLOWED=NO
 
