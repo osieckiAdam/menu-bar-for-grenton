@@ -58,11 +58,18 @@ final class ImportModel {
     }
 
     func importFile(at url: URL) {
+        let isProject = url.pathExtension.lowercased() == "omp"
+        // The library rejects larger files only after they are read; check before reading a file picked by mistake.
+        let limit = isProject ? ProjectFile.maxBytes : ProvisioningClient.maxPayloadBytes
+        if let size = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize, size > limit {
+            step = .failed("Plik jest za duży na interfejs Grenton (ponad \(limit / 1024 / 1024) MB).")
+            return
+        }
         step = .working("Wczytywanie \(url.lastPathComponent)…")
         Task {
             do {
                 let data = try Data(contentsOf: url)
-                if url.pathExtension.lowercased() == "omp" {
+                if isProject {
                     try await importProject(data)
                 } else {
                     try await app.useArchive(data)

@@ -13,6 +13,7 @@ APP="$DERIVED/Build/Products/Release/Menu Bar for Grenton.app"
 ZIP="$ROOT/dist/MenuBarForGrenton-$VERSION.zip"
 
 rm -rf "$DERIVED"
+# Package versions come only from Package.resolved, as tested locally.
 # "-" is an ad-hoc signature: the sandbox entitlements still apply, but no
 # team is needed. Base entitlements (get-task-allow) stay out of the release.
 xcodebuild build \
@@ -21,6 +22,7 @@ xcodebuild build \
     -configuration Release \
     -destination 'generic/platform=macOS' \
     -derivedDataPath "$DERIVED" \
+    -onlyUsePackageVersionsFromResolvedFile \
     MARKETING_VERSION="$VERSION" \
     CURRENT_PROJECT_VERSION="$BUILD_NUMBER" \
     CODE_SIGN_IDENTITY=- \

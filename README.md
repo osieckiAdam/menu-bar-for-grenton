@@ -76,6 +76,17 @@ Swift library for talking to Grenton CLU controllers.
 > [GitHub Actions](.github/workflows/release.yml); if you prefer not to trust
 > a prebuilt binary, [build it yourself](#option-b-build-from-source).
 
+**Optional: check that the zip really comes from this repository.** Each
+release has a build provenance attestation and a SHA-256 file. With the
+[GitHub CLI](https://cli.github.com):
+
+```bash
+gh attestation verify MenuBarForGrenton-<version>.zip --repo osieckiAdam/menu-bar-for-grenton
+```
+
+Or compare the checksum with the `.sha256` file from the release:
+`shasum -a 256 -c MenuBarForGrenton-<version>.zip.sha256`.
+
 **To open it the first time**, after macOS has blocked it once:
 
 1. Open *System Settings → Privacy & Security*.
@@ -141,13 +152,24 @@ stays up until you quit the app, so state is always current when you look.
 
 The mobile interface contains the **AES key of your CLUs**. The app
 never stores it on its own: the interface is kept only by the library’s
-`InterfaceStore`, inside the app’s sandboxed Application Support folder.
+`InterfaceStore`, inside the app’s sandboxed Application Support folder:
+
+```
+~/Library/Containers/com.osieckiadam.MenuBarForGrenton/Data/Library/Application Support/com.osieckiadam.MenuBarForGrenton/Grenton/
+```
+
+To delete it, choose **⋯ → Usuń zapisany interfejs…** (Remove saved
+interface). Do this before deleting the app: removing the app from
+*Applications* leaves its data behind.
 
 - `*.zip` and `*.omp` are git-ignored. **Never commit your interface or project file.**
 - The repository contains only synthetic interfaces
   ([demo](MenuBarForGrenton/Demo/demo-interface.json),
   [tests](MenuBarForGrentonTests/Fixtures/test-interface.json)).
-- The app talks only to devices on your local network.
+- The app talks only to the CLUs and the Object Manager address you enter.
+- Diagnostic messages in the system log (Console.app, subsystem
+  `com.osieckiadam.MenuBarForGrenton`) are marked private, so CLU names and
+  addresses do not show up in log captures attached to bug reports.
 
 ## Contributing
 

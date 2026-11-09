@@ -1,7 +1,7 @@
 #!/bin/bash
 # Publishes a release: checks the repo, runs the tests and a local release
 # build, pushes the tag, waits for the Release workflow and verifies the
-# zip it uploaded.
+# zip it uploaded (signature, version, SHA-256, provenance).
 # Usage: scripts/release.sh <version>   e.g. scripts/release.sh 0.2.0
 set -euo pipefail
 
@@ -21,7 +21,7 @@ git fetch -q origin main --tags
 ! git rev-parse -q --verify "refs/tags/$TAG" >/dev/null || die "tag $TAG already exists"
 
 echo "==> Tests"
-xcodebuild test -scheme MenuBarForGrenton -destination 'platform=macOS' -quiet
+xcodebuild test -project MenuBarForGrenton.xcodeproj -scheme MenuBarForGrenton -destination 'platform=macOS' -quiet
 
 # The local Xcode can be newer than the one on the runner, so this does not
 # guarantee the CI build passes; it catches everything else before tagging.
@@ -51,5 +51,8 @@ ditto -x -k "$TMP/MenuBarForGrenton-$VERSION.zip" "$TMP/app"
 codesign --verify --deep --strict "$TMP/app/$APP_NAME.app"
 SHIPPED="$(plutil -extract CFBundleShortVersionString raw "$TMP/app/$APP_NAME.app/Contents/Info.plist")"
 [[ "$SHIPPED" == "$VERSION" ]] || die "release reports version $SHIPPED, expected $VERSION"
+(cd "$TMP" && shasum -a 256 -c "MenuBarForGrenton-$VERSION.zip.sha256" >/dev/null) || die "SHA-256 does not match"
+gh attestation verify "$TMP/MenuBarForGrenton-$VERSION.zip" --repo osieckiAdam/menu-bar-for-grenton >/dev/null \
+    || die "build provenance attestation does not verify"
 
 gh release view "$TAG" --json url --jq .url

@@ -134,7 +134,8 @@ final class HomeModel {
 
 extension GrentonLogger {
     /// Library warnings in the unified log (Console.app, subsystem `com.osieckiadam.MenuBarForGrenton`).
+    /// Private: they name CLUs and their addresses, and logs end up attached to bug reports.
     static let appLog = GrentonLogger { level, message in
-        if level >= .warning { AppLog.grenton.warning("\(message, privacy: .public)") }
+        if level >= .warning { AppLog.grenton.warning("\(message, privacy: .private)") }
     }
 }

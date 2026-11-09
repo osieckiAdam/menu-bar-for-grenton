@@ -32,6 +32,9 @@ struct MenuFooter: View {
     private var actionsMenu: some View {
         Menu {
             Button("Zmień interfejs…", action: openImport)
+            if app.canRemoveInterface {
+                Button("Usuń zapisany interfejs…", action: confirmRemoveInterface)
+            }
             if let demo = app.home?.demo {
                 Divider()
                 Section("Demo") {
@@ -52,6 +55,27 @@ struct MenuFooter: View {
         .menuStyle(.borderlessButton)
         .menuIndicator(.hidden)
         .fixedSize()
+    }
+
+    /// Asks first: getting the interface back means exporting it from Object Manager again.
+    private func confirmRemoveInterface() {
+        let alert = NSAlert()
+        alert.messageText = "Usunąć zapisany interfejs?"
+        alert.informativeText = "Menu Bar for Grenton rozłączy się z CLU i usunie z dysku interfejs razem z kluczem szyfrowania. Żeby znowu sterować domem, trzeba będzie go zaimportować ponownie."
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "Usuń")
+        alert.addButton(withTitle: "Anuluj")
+        alert.buttons[0].hasDestructiveAction = true
+        NSApp.activate()
+        guard alert.runModal() == .alertFirstButtonReturn else { return }
+        Task {
+            do {
+                try await app.removeInterface()
+            } catch {
+                let failure = NSAlert(error: error)
+                failure.runModal()
+            }
+        }
     }
 }
 

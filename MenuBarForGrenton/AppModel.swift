@@ -63,6 +63,19 @@ final class AppModel {
         try await showSaved()
     }
 
+    /// Whether there may be a saved interface (and with it the CLU key) to remove.
+    var canRemoveInterface: Bool {
+        if isDemo || store == nil { return false }
+        if case .needsInterface = phase { return false }
+        return true
+    }
+
+    /// Disconnects and deletes the saved interface, key included.
+    func removeInterface() async throws {
+        try store?.remove()
+        await replace(with: .needsInterface)
+    }
+
     func menuOpened() {
         menuOpen = true
         home?.menuOpened()
