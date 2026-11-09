@@ -149,7 +149,9 @@ struct LightRowView: View {
                 .lineLimit(1)
                 .foregroundStyle(isOn == nil ? .secondary : .primary)
             Spacer()
-            Toggle(light.name, isOn: Binding(get: { isOn ?? false }, set: setOn))
+            // A closure rather than `set: setOn`: converting the function value
+            // crashes the Swift 6.3 compiler in x86_64 release builds.
+            Toggle(light.name, isOn: Binding(get: { isOn ?? false }, set: { setOn($0) }))
                 .toggleStyle(.switch)
                 .controlSize(.mini)
                 .labelsHidden()
