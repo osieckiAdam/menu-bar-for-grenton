@@ -1,0 +1,51 @@
+# CodeQL for the Swift code and the workflows. Replaces GitHub's default
+# setup, whose Swift autobuild builds with -target and misses the SPM packages.
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '17 4 * * 1'
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ${{ matrix.language == 'swift' && 'macos-26' || 'ubuntu-latest' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [swift, actions]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: github/codeql-action/init@33d7b85da1a04171e211befe2c739303b9a4c066 # v4.39.3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.language == 'swift' && 'manual' || 'none' }}
+
+      # Same Xcode choice as the release workflow (grenton-core-swift needs Swift 6.2.3+).
+      - name: Build
+        if: matrix.language == 'swift'
+        run: |
+          XCODE="$(ls -d /Applications/Xcode_[0-9]*.app | grep -viE 'beta|rc' | sort -V | tail -1)"
+          sudo xcode-select -s "$XCODE"
+          xcodebuild build \
+            -project MenuBarForGrenton.xcodeproj \
+            -scheme MenuBarForGrenton \
+            -configuration Debug \
+            -destination 'platform=macOS,arch=arm64' \
+            -onlyUsePackageVersionsFromResolvedFile \
+            CODE_SIGNING_ALLOWED=NO
+
+      - uses: github/codeql-action/analyze@33d7b85da1a04171e211befe2c739303b9a4c066 # v4.39.3
+        with:
+          category: /language:${{ matrix.language }}
