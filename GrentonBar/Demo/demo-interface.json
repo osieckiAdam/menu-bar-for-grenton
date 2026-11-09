@@ -1,0 +1,1370 @@
+{
+ "id": "grentonbar-demo",
+ "version": 1,
+ "name": "Dom demo",
+ "icon": "home",
+ "theme": "GRENTON",
+ "encryption": {
+  "key": "AAECAwQFBgcICQoLDA0ODw==",
+  "iv": "EBESExQVFhcYGRobHB0eHw=="
+ },
+ "clus": [
+  {
+   "id": "CLU_100000001",
+   "serialNumber": "100000001",
+   "name": "CLU Demo Dół",
+   "ip": "10.99.0.11",
+   "port": 1234,
+   "connectionType": "LOCAL_ONLY"
+  },
+  {
+   "id": "CLU_100000002",
+   "serialNumber": "100000002",
+   "name": "CLU Demo Góra",
+   "ip": "10.99.0.12",
+   "port": 1234,
+   "connectionType": "LOCAL_ONLY"
+  }
+ ],
+ "pushNotifications": [],
+ "pages": [
+  {
+   "name": "Pokój dzienny (demo)",
+   "icon": "home",
+   "isFullscreenWidget": false,
+   "widgets": [
+    {
+     "type": "HEADER",
+     "id": "demow0002",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Światło główne",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0003",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Żyrandol nad stołem",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "DOU0001",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0001",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0001",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "chandelier_1"
+      }
+     ]
+    },
+    {
+     "type": "DIMMER_V2",
+     "id": "demow0005",
+     "label": "Plafon przy oknie",
+     "icon": "bulb",
+     "min": 0,
+     "max": 100,
+     "precision": 0,
+     "object": {
+      "value": {
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0004",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      },
+      "setValueAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0004",
+       "index": "0",
+       "value": "0",
+       "callType": "METHOD"
+      },
+      "onAction": {
+       "event": "ON",
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0004",
+       "index": "1",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "offAction": {
+       "event": "OFF",
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0004",
+       "index": "2",
+       "value": "",
+       "callType": "METHOD"
+      }
+     }
+    },
+    {
+     "type": "HEADER",
+     "id": "demow0006",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Nastrojowe",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "LED",
+     "id": "demow0008",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Pasek za telewizorem",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "image": "led",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "LED0007",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "LED0007",
+         "index": "1",
+         "value": "",
+         "callType": "METHOD"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "LED0007",
+         "index": "2",
+         "value": "",
+         "callType": "METHOD"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF"
+      },
+      {
+       "type": "SLIDER_HUE",
+       "label": "Barwa",
+       "rowId": 1,
+       "unit": "DEGREE",
+       "range": {
+        "min": 0,
+        "max": 360
+       },
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "LED0007",
+        "index": "3",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "CLICK",
+         "cluId": "CLU_100000001",
+         "objectName": "LED0007",
+         "index": "4",
+         "value": "0",
+         "callType": "METHOD"
+        }
+       ]
+      },
+      {
+       "type": "SLIDER_SATURATION",
+       "label": "Nasycenie",
+       "rowId": 2,
+       "unit": "PERCENT",
+       "range": {
+        "min": 0,
+        "max": 100
+       },
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "LED0007",
+        "index": "5",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "CLICK",
+         "cluId": "CLU_100000001",
+         "objectName": "LED0007",
+         "index": "6",
+         "value": "0",
+         "callType": "METHOD"
+        }
+       ]
+      },
+      {
+       "type": "SLIDER_BRIGHTNESS",
+       "label": "Jasność",
+       "rowId": 3,
+       "unit": "PERCENT",
+       "range": {
+        "min": 0,
+        "max": 255
+       },
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "LED0007",
+        "index": "7",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "CLICK",
+         "cluId": "CLU_100000001",
+         "objectName": "LED0007",
+         "index": "8",
+         "value": "0",
+         "callType": "METHOD"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF_DOUBLE",
+     "id": "demow0009",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE_V2",
+       "label": "Lampka lewa",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "DOU0010",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0010",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0010",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "bulb"
+      },
+      {
+       "type": "BUTTON_BISTABLE_V2",
+       "label": "Lampka prawa",
+       "rowId": 1,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "DOU0011",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0011",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0011",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "bulb"
+      }
+     ]
+    },
+    {
+     "type": "HEADER",
+     "id": "demow0012",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Pomiary",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "VALUE_V2",
+     "id": "demow0013",
+     "label": "Temperatura w pokoju",
+     "icon": "temp",
+     "unit": "DEGREE",
+     "valueType": "FLOAT",
+     "precision": 1,
+     "object": {
+      "value": {
+       "cluId": "CLU_100000001",
+       "objectName": "PAN0014",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      }
+     }
+    },
+    {
+     "type": "HEADER",
+     "id": "demow0100",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Rolety",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "ROLLER_SHUTTER_V3",
+     "id": "demow0101",
+     "icon": "shutter",
+     "label": "Roleta tarasowa",
+     "object": {
+      "state": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      },
+      "position": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "1",
+       "callType": "ATTRIBUTE"
+      },
+      "lamelPosition": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "2",
+       "callType": "ATTRIBUTE"
+      },
+      "lamelMoveTimeout": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "3",
+       "callType": "ATTRIBUTE"
+      },
+      "setPositionAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "4",
+       "value": "$value$",
+       "callType": "METHOD"
+      },
+      "setLamelPositionAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "5",
+       "value": "$value$",
+       "callType": "METHOD"
+      },
+      "moveUpAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "6",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "moveDownAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "7",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "startAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "8",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "stopAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "9",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "setRollerBlockedAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0101",
+       "index": "10",
+       "value": "0",
+       "callType": "METHOD"
+      }
+     }
+    },
+    {
+     "type": "ROLLER_SHUTTER_V3",
+     "id": "demow0102",
+     "icon": "shutter",
+     "label": "Roleta boczna",
+     "object": {
+      "state": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      },
+      "position": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "1",
+       "callType": "ATTRIBUTE"
+      },
+      "lamelPosition": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "2",
+       "callType": "ATTRIBUTE"
+      },
+      "setPositionAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "4",
+       "value": "$value$",
+       "callType": "METHOD"
+      },
+      "setLamelPositionAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "5",
+       "value": "$value$",
+       "callType": "METHOD"
+      },
+      "moveUpAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "6",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "moveDownAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "7",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "startAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "8",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "setRollerBlockedAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0102",
+       "index": "10",
+       "value": "0",
+       "callType": "METHOD"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Aneks (demo)",
+   "icon": "home",
+   "isFullscreenWidget": false,
+   "widgets": [
+    {
+     "type": "ON_OFF",
+     "id": "demow0015",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Wyspa kuchenna",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "DOU0016",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0016",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0016",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "ceiling_lamp_7"
+      }
+     ]
+    },
+    {
+     "type": "HEADER",
+     "id": "demow0017",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Blat",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0018",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Podszafkowe",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "DOU0019",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0019",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0019",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "bulb"
+      }
+     ]
+    },
+    {
+     "type": "DIMMER_V2",
+     "id": "demow0021",
+     "label": "Okap – światło",
+     "icon": "bulb",
+     "min": 0,
+     "max": 100,
+     "precision": 0,
+     "object": {
+      "value": {
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0020",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      },
+      "setValueAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0020",
+       "index": "0",
+       "value": "0",
+       "callType": "METHOD"
+      },
+      "onAction": {
+       "event": "ON",
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0020",
+       "index": "1",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "offAction": {
+       "event": "OFF",
+       "cluId": "CLU_100000001",
+       "objectName": "DIM0020",
+       "index": "2",
+       "value": "",
+       "callType": "METHOD"
+      }
+     }
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0099",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Pompa obiegowa",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "image": "valve",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "DOU0099",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0099",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0099",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Pokój gościnny (demo)",
+   "icon": "home",
+   "isFullscreenWidget": false,
+   "widgets": [
+    {
+     "type": "ON_OFF",
+     "id": "demow0022",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Sufit gościnny",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "DOU0023",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0023",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0023",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "plafond"
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0024",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Lampka nocna gościnna",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "DOU0025",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0025",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0025",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "bulb"
+      }
+     ]
+    },
+    {
+     "type": "DIMMER_V2",
+     "id": "demow0027",
+     "label": "Kinkiet przy biurku",
+     "icon": "bulb",
+     "min": 0,
+     "max": 100,
+     "precision": 0,
+     "object": {
+      "value": {
+       "cluId": "CLU_100000002",
+       "objectName": "DIM0026",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      },
+      "setValueAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000002",
+       "objectName": "DIM0026",
+       "index": "0",
+       "value": "0",
+       "callType": "METHOD"
+      },
+      "onAction": {
+       "event": "ON",
+       "cluId": "CLU_100000002",
+       "objectName": "DIM0026",
+       "index": "1",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "offAction": {
+       "event": "OFF",
+       "cluId": "CLU_100000002",
+       "objectName": "DIM0026",
+       "index": "2",
+       "value": "",
+       "callType": "METHOD"
+      }
+     }
+    },
+    {
+     "type": "HEADER",
+     "id": "demow0103",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Rolety",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "ROLLER_SHUTTER_V3",
+     "id": "demow0104",
+     "icon": "shutter",
+     "label": "Roleta gościnna",
+     "object": {
+      "state": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      },
+      "position": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "1",
+       "callType": "ATTRIBUTE"
+      },
+      "lamelPosition": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "2",
+       "callType": "ATTRIBUTE"
+      },
+      "lamelMoveTimeout": {
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "3",
+       "callType": "ATTRIBUTE"
+      },
+      "setPositionAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "4",
+       "value": "$value$",
+       "callType": "METHOD"
+      },
+      "setLamelPositionAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "5",
+       "value": "$value$",
+       "callType": "METHOD"
+      },
+      "moveUpAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "6",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "moveDownAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "7",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "startAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "8",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "stopAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "9",
+       "value": "",
+       "callType": "METHOD"
+      },
+      "setRollerBlockedAction": {
+       "event": "CLICK",
+       "cluId": "CLU_100000001",
+       "objectName": "ROL0104",
+       "index": "10",
+       "value": "0",
+       "callType": "METHOD"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Pomiary (demo)",
+   "icon": "home",
+   "isFullscreenWidget": false,
+   "widgets": [
+    {
+     "type": "HEADER",
+     "id": "demow0028",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Odczyty temperatur",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "VALUE_V2",
+     "id": "demow0029",
+     "label": "Na zewnątrz",
+     "icon": "temp",
+     "unit": "DEGREE",
+     "valueType": "FLOAT",
+     "precision": 1,
+     "object": {
+      "value": {
+       "cluId": "CLU_100000001",
+       "objectName": "PAN0030",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      }
+     }
+    },
+    {
+     "type": "VALUE_V2",
+     "id": "demow0031",
+     "label": "Strych",
+     "icon": "temp",
+     "unit": "DEGREE",
+     "valueType": "FLOAT",
+     "precision": 1,
+     "object": {
+      "value": {
+       "cluId": "CLU_100000002",
+       "objectName": "PAN0032",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Taras i podjazd (demo)",
+   "icon": "home",
+   "isFullscreenWidget": false,
+   "widgets": [
+    {
+     "type": "HEADER",
+     "id": "demow0033",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Przy bramie wjazdowej",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0034",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Lampy przy bramie",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "DOU0035",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0035",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0035",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "wall_lamp_1"
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0036",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Słupki wzdłuż ścieżki",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "DOU0037",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0037",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0037",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "bulb"
+      }
+     ]
+    },
+    {
+     "type": "HEADER",
+     "id": "demow0038",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Taras",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "LED",
+     "id": "demow0040",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Taśma pod daszkiem",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "image": "led",
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "LED0039",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000002",
+         "objectName": "LED0039",
+         "index": "1",
+         "value": "",
+         "callType": "METHOD"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000002",
+         "objectName": "LED0039",
+         "index": "2",
+         "value": "",
+         "callType": "METHOD"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF"
+      },
+      {
+       "type": "SLIDER_HUE",
+       "label": "Barwa",
+       "rowId": 1,
+       "unit": "DEGREE",
+       "range": {
+        "min": 0,
+        "max": 360
+       },
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "LED0039",
+        "index": "3",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "CLICK",
+         "cluId": "CLU_100000002",
+         "objectName": "LED0039",
+         "index": "4",
+         "value": "0",
+         "callType": "METHOD"
+        }
+       ]
+      },
+      {
+       "type": "SLIDER_SATURATION",
+       "label": "Nasycenie",
+       "rowId": 2,
+       "unit": "PERCENT",
+       "range": {
+        "min": 0,
+        "max": 100
+       },
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "LED0039",
+        "index": "5",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "CLICK",
+         "cluId": "CLU_100000002",
+         "objectName": "LED0039",
+         "index": "6",
+         "value": "0",
+         "callType": "METHOD"
+        }
+       ]
+      },
+      {
+       "type": "SLIDER_BRIGHTNESS",
+       "label": "Jasność",
+       "rowId": 3,
+       "unit": "PERCENT",
+       "range": {
+        "min": 0,
+        "max": 255
+       },
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "LED0039",
+        "index": "7",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "CLICK",
+         "cluId": "CLU_100000002",
+         "objectName": "LED0039",
+         "index": "8",
+         "value": "0",
+         "callType": "METHOD"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0041",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Kinkiety tarasowe",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "DOU0042",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0042",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0042",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "wall_lamp_1"
+      }
+     ]
+    },
+    {
+     "type": "HEADER",
+     "id": "demow0043",
+     "components": [
+      {
+       "unit": "UNKNOWN",
+       "label": "Pusta sekcja",
+       "type": "HEADER",
+       "rowId": 0
+      }
+     ]
+    },
+    {
+     "type": "VALUE_V2",
+     "id": "demow0044",
+     "label": "Wiatr",
+     "icon": "temp",
+     "unit": "DEGREE",
+     "valueType": "FLOAT",
+     "precision": 1,
+     "object": {
+      "value": {
+       "cluId": "CLU_100000002",
+       "objectName": "PAN0045",
+       "index": "0",
+       "callType": "ATTRIBUTE"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Wszystkie główne (demo)",
+   "icon": "home",
+   "isFullscreenWidget": false,
+   "widgets": [
+    {
+     "type": "ON_OFF",
+     "id": "demow0046",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Żyrandol (skrót)",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000001",
+        "objectName": "DOU0001",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0001",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000001",
+         "objectName": "DOU0001",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "chandelier_1"
+      }
+     ]
+    },
+    {
+     "type": "ON_OFF",
+     "id": "demow0047",
+     "components": [
+      {
+       "type": "BUTTON_BISTABLE",
+       "label": "Sufit gościnny (skrót)",
+       "rowId": 0,
+       "unit": "UNKNOWN",
+       "state": {
+        "cluId": "CLU_100000002",
+        "objectName": "DOU0048",
+        "index": "0",
+        "callType": "ATTRIBUTE"
+       },
+       "actions": [
+        {
+         "event": "ON",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0048",
+         "index": "0",
+         "value": "1",
+         "callType": "ATTRIBUTE"
+        },
+        {
+         "event": "OFF",
+         "cluId": "CLU_100000002",
+         "objectName": "DOU0048",
+         "index": "0",
+         "value": "0",
+         "callType": "ATTRIBUTE"
+        }
+       ],
+       "onIndication": "ON",
+       "offIndication": "OFF",
+       "image": "plafond"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+# The interface archive and the project file hold the installation's AES key.
+*.zip
+*.omp
+dist/
+
+# Xcode
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+.DS_Store

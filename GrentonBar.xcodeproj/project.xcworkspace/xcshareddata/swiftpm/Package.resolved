@@ -1,0 +1,24 @@
+{
+  "originHash" : "54b0c89e16a4ca2a6aef9e11866f29bed9466868ddb217f2a5cd7766bc0290f7",
+  "pins" : [
+    {
+      "identity" : "grenton-core-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/osieckiAdam/grenton-core-swift",
+      "state" : {
+        "revision" : "3696435ca8ff42fb898e586a57f45960cf797c7b",
+        "version" : "0.14.0"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "22787ffb59de99e5dc1fbfe80b19c97a904ad48d",
+        "version" : "0.9.20"
+      }
+    }
+  ],
+  "version" : 3
+}
