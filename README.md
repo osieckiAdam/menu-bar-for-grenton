@@ -170,6 +170,7 @@ MenuBarForGrenton/
 └── Demo/                       # Simulated house for demo mode
 MenuBarForGrentonTests/         # Unit tests and screenshot rendering
 scripts/build-release.sh        # Release build: ad-hoc signed, zipped
+scripts/release.sh              # Test, tag, publish and verify a release
 .github/workflows/              # Publishes a release when a version tag is pushed
 ```
 
@@ -200,19 +201,20 @@ scripts/build-release.sh        # Release build: ad-hoc signed, zipped
 
 ### Releasing
 
-Releases are published by the [Release workflow](.github/workflows/release.yml).
-Push a version tag and it builds the app with
-[`scripts/build-release.sh`](scripts/build-release.sh), then attaches
-`MenuBarForGrenton-<version>.zip` to a new GitHub release with generated notes:
+Run [`scripts/release.sh`](scripts/release.sh) from an up-to-date, clean `main`:
 
 ```bash
-git tag v0.2.0
-git push origin v0.2.0
+scripts/release.sh 0.2.0
 ```
 
-The version shown in the app comes from the tag; `MARKETING_VERSION` in
-`project.yml` is only the default for local builds. Builds are ad-hoc signed
-and not notarized – no Apple Developer account is involved.
+It runs the tests and a local release build, pushes the `v0.2.0` tag, waits
+for the [Release workflow](.github/workflows/release.yml) and verifies the
+`MenuBarForGrenton-<version>.zip` it attaches to a new GitHub release. The
+version shown in the app comes from the tag. Builds are ad-hoc signed and not
+notarized, so no Apple Developer account is involved.
+
+If the workflow fails, fix it on `main` and release the next patch version;
+never move a published tag.
 
 ## License
 
